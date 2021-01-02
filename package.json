@@ -7,10 +7,11 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start-dev": "nodemon",
+    "compile": "webpack",
     "start-prod": "yarn build && npx pm2 start pm2.yaml",
     "inspect": "nodemon --inspect src/bootstrap/index",
     "test": "jest && npm run jest-cov",
-    "jest-cov":"jest --coverage --no-cache --runInBand",
+    "jest-cov": "jest --coverage --no-cache --runInBand",
     "format": "prettier --write './src/**/**/*.ts'",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
     "precise-commits": "precise-commits --check-only"
@@ -48,7 +49,8 @@
     "ts-node": "^8.2.0",
     "tslint": "^5.17.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.5.1"
+    "typescript": "^3.5.1",
+    "webpack-cli": "^4.3.1"
   },
   "dependencies": {
     "compression": "^1.7.4",
@@ -67,7 +69,10 @@
     "slonik-interceptor-preset": "^1.2.2",
     "swagger-jsdoc": "^3.2.9",
     "swagger-ui-express": "^4.0.6",
+    "ts-loader": "^8.0.13",
     "typedi": "^0.8.0",
+    "webpack": "^5.11.1",
+    "webpack-filter-warnings-plugin": "^1.2.1",
     "winston": "^3.2.1"
   },
   "husky": {
