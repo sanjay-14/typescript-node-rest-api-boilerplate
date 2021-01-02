@@ -39,11 +39,11 @@ export default [
     handler: [
       async (Req: Request, res: Response, next: NextFunction) => {
         try {
-          let statusServiceInstance = Container.get(statusService);
-          let apiStatus = await statusServiceInstance.status();
+          // let statusServiceInstance = Container.get(statusService);
+          // let apiStatus = await statusServiceInstance.status();
           res.api.status = 200;
           res.status(res.api.status);
-          res.api.data.push(apiStatus);
+          res.api.data.push('testing API');
           res.send(res.api);
         } catch (error) {
           next(error);

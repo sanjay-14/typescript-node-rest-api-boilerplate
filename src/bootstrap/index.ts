@@ -9,7 +9,7 @@ import { handleServerExit, handleExceptions } from './middleware/errorMiddleware
 import Config from './../cfg';
 SetTimeZone('UTC');
 
-async function startServer() {
+export default async function startServer() {
   let app = express();
 
   await middlewareLoader(app);

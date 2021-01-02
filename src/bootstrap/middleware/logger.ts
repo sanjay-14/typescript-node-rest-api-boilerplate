@@ -39,7 +39,7 @@ export const HandleLogger = (router: Router) => {
     req.logData = {
       method: req.method,
       url: req.originalUrl,
-      query: req.query,
+      query: req.query.toString(),
       body: req.body,
       reqid: ++count,
       ip: req.ip,

@@ -9,8 +9,8 @@
     "start-dev": "nodemon",
     "start-prod": "yarn build && npx pm2 start pm2.yaml",
     "inspect": "nodemon --inspect src/bootstrap/index",
-    "test": "mocha --require ts-node/register --require ts-jest --require source-map-support/register --watch-extensions ts --forbid-only --full-trace --bail --check-leaks --reporter list --timeout 10000 --recursive  tests",
-    "jest": "jest",
+    "test": "jest && npm run jest-cov",
+    "jest-cov":"jest --coverage --no-cache --runInBand",
     "format": "prettier --write './src/**/**/*.ts'",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
     "precise-commits": "precise-commits --check-only"
