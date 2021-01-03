@@ -8,10 +8,10 @@
     "build": "tsc -p tsconfig.json",
     "start-dev": "nodemon",
     "start-prod": "yarn build && npx pm2 start pm2.yaml",
-    "end-prod":"npx pm2 stop 'all'",
+    "end-prod": "npx pm2 stop 'all'",
     "inspect": "nodemon --inspect src/bootstrap/index",
     "test": "jest && npm run jest-cov",
-    "jest-cov":"jest --coverage --no-cache --runInBand",
+    "jest-cov": "jest --coverage --no-cache --runInBand",
     "format": "prettier --write './src/**/**/*.ts'",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
     "precise-commits": "precise-commits --check-only"
