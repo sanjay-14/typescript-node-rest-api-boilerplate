@@ -1,4 +1,4 @@
-FROM nodejs:latest as test-env
+FROM node:latest as test-env
 
 RUN apk add --no-cache nodejs tini
 
