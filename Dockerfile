@@ -1,4 +1,4 @@
-FROM alpine:3.5 as test-env
+FROM nodejs:latest as test-env
 
 RUN apk add --no-cache nodejs tini
 
