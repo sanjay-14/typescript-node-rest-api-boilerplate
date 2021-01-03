@@ -1,9 +1,10 @@
-FROM node:latest as test-env
+FROM node:12-alpine as test-env
 
 # set working directory
 WORKDIR /app
 # copy project file
 COPY package.json /app/
+COPY . /app/
 # set NODE_ENV to dev
 ENV NODE_ENV dev
 
