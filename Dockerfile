@@ -7,7 +7,7 @@ COPY package.json /app/
 # set NODE_ENV to dev
 ENV NODE_ENV dev
 
-RUN npm install -g yarn
+# RUN npm install -g yarn
 # install node packages
 
 # copy app files
