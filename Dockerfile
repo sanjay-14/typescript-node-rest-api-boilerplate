@@ -10,7 +10,12 @@ ENV NODE_ENV dev
 RUN npm -v
 # install node packages
 
-RUN npm i 
+RUN npm i -g yarn
+
 # copy app files
+
+RUN yarn install
+
+RUN yarn run test
 
 COPY --from=test-env /app/ /app/
