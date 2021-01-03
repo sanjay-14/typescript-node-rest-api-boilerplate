@@ -17,10 +17,6 @@ RUN yarn -v
 
 RUN yarn install
 
-RUN export BASEURL=http://localhost
-RUN export NODE_ENV=development
-RUN export LOG_LEVEL=debug
-
 RUN yarn run test
 
 COPY --from=test-env /app/ /app/

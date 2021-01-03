@@ -1,11 +1,11 @@
-import * as dotenv from 'dotenv-safe';
+// import * as dotenv from 'dotenv-safe';
 import { IConfig } from '@interfaces/IConfig';
 
-const envFound = dotenv.config();
+// const envFound = dotenv.config();
 
-if (!envFound) {
-  throw new Error("⚠️  Couldn't find .env file  ⚠️");
-}
+// if (!envFound) {
+//   throw new Error("⚠️  Couldn't find .env file  ⚠️");
+// }
 
 const config: IConfig = {
   appname: 'Blue App',
