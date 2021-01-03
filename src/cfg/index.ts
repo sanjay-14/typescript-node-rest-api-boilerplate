@@ -33,5 +33,5 @@ const config: IConfig = {
 
 export default {
   ...config,
-  ...require(`./${config.env}`).default,
+  // ...require(`./${config.env}`).default,
 };

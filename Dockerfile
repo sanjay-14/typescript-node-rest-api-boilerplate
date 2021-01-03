@@ -1,4 +1,4 @@
-FROM node:12-alpine as test-env
+FROM node:12-alpine AS builder
 
 # set working directory
 WORKDIR /app
@@ -17,6 +17,6 @@ RUN yarn -v
 
 RUN yarn install
 
-RUN yarn run test
+# RUN yarn run test
 
-COPY --from=test-env /app/ /app/
+# COPY --from=builder /app/ /app/
