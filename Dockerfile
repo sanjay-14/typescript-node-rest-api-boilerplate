@@ -1,4 +1,6 @@
-FROM node:latest as test-env
+FROM alpine:3.5 as test-env
+
+RUN apk add --no-cache nodejs tini
 
 # set working directory
 WORKDIR /app
@@ -7,12 +9,12 @@ COPY package.json /app/
 # set NODE_ENV to dev
 ENV NODE_ENV dev
 
-RUN npm -v
+RUN npm install -g yarn
 # install node packages
 
-RUN npm i -g yarn
-
 # copy app files
+
+RUN yarn -v
 
 RUN yarn install
 
