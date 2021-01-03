@@ -1,7 +1,5 @@
 FROM node:latest as test-env
 
-RUN apk add --no-cache nodejs tini
-
 # set working directory
 WORKDIR /app
 # copy project file
